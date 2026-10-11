@@ -19,13 +19,20 @@ public class CidadeServlet extends HttpServlet {
 
         CidadeDAO dao = new CidadeDAO();
 
-        saida.println("<!DOCTYPE html><html><body>");
-        saida.println("<h2>Cidades do Banco de Dados</h2>");
+        saida.println("<!DOCTYPE html><html>");
+        saida.println("<head>");
+        saida.println("<title>JDBC-Servlet - Cidades</title>");
+        saida.println("<link rel='stylesheet' href='css/estilos.css'>");
+        saida.println("</head>");
+        saida.println("<body>");
+        saida.println("<h2>&#8594; <span class='titulo'>Cidades do Banco de Dados<span></h2>");
         saida.println("<ul>");
 
         for (Cidade c : dao.listarTodas()) {
             saida.println("<li>" + c.getNome() + " - " + c.getEstado().getSigla() + "</li>");
         }
+
+        saida.println("</ul><a href='/'>Voltar</a>");
         saida.println("</ul></body></html>");
     }
 }

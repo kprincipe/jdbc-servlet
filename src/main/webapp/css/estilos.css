@@ -1,0 +1,11 @@
+html * {
+    background-color: #181818;
+    color: #cccccc;
+    font-family: 'Comic Sans MS', sans-serif;
+}
+
+.titulo {
+    text-decoration-line: underline;
+    text-decoration-style: wavy;
+    text-decoration-color: yellow;
+}
